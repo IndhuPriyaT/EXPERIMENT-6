@@ -11,7 +11,37 @@ Step 6: Else, return that it is not a palindrome.
 Step 7: Stop. 
 
 ## PROGRAM
+```
+def Palindrome(string):
+    for i in range(0, int(len(string) / 2)):
+        if string[i] != string[len(string) - i - 1]:  # Fixed indexing
+            return False
+    return True
 
+
+s = input("Enter a string: ")  # Added a prompt for clarity
+
+c = 1
+for i in s:
+    if not i.isalpha():
+        c = 0
+        break  # Added break to stop checking after finding a non-alphabetic character
+
+if c == 0:
+    print("Enter a valid string")
+    print("Test Case:Fail")
+else:
+    answer = Palindrome(s)
+    if answer:
+        print("The given string is a palindrome")
+        print("Test Case:Pass")
+    else:
+        print("The given string is not a palindrome")
+        print("Test Case:Pass") 
+
+```
 ## OUTPUT
+<img width="444" height="79" alt="image" src="https://github.com/user-attachments/assets/3fcdf640-50dc-4b52-a174-5d2b1048aa9b" />
 
 ## RESULT
+Thus,python program for checking Palindrome and to write test cases for ir is successfully executed. 
